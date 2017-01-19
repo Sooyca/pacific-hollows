@@ -29,5 +29,5 @@ app.get('/removecookie', (req, res) =>
 	res.redirect('/')
 })
 
-var server = http.createServer(app).listen(process.env.PORT || 5000)
+var server = http.createServer(app).listen(process.env.PORT || 5000);
 console.log('server started')
