@@ -3,7 +3,7 @@ var express = require('express')
 var cookieParser = require('cookie-parser');
 
 var app = express()
-
+app.set('port', (process.env.PORT || 5000));
 app.set('view engine', 'ejs')
 app.set('views', './')
 app.use(cookieParser())
@@ -30,5 +30,5 @@ app.get('/removecookie', (req, res) =>
 	res.redirect('/')
 })
 
-var server = http.createServer(app).listen( process.env.PORT || 3000)
+var server = http.createServer(app).listen( process.env.PORT || 5000)
 console.log('server started')
